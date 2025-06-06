@@ -26,10 +26,11 @@ def init_db():
 # process image
 def process_image(filepath):
     img = Image.open(filepath).convert("L")  # grayscale
-    # i will be keepin gthis here incase, until i am done with the project. might need old constants. img = img.resize((RESIZED_DIM, RESIZED_DIM), Image.ANTIALIAS)
-    from PIL import Image
+    # i will be keeping this here in case, until I am done with the project. might need old constants.
+    # img = img.resize((RESIZED_DIM, RESIZED_DIM), Image.ANTIALIAS)
     img = img.resize((RESIZED_DIM, RESIZED_DIM), Image.Resampling.LANCZOS)
     return np.array(img)
+
 
 # split into grid blocks
 def split_into_blocks(image_array):
