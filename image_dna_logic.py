@@ -14,15 +14,17 @@ GRID_SIZE = 4  # 4x4 = 16 pieces
 RESIZED_DIM = 128  # final image is 128x128
 
 def init_db():
+    if os.path.exists("imageDNA.db"):
+        os.remove("imageDNA.db")  # remove old DB
     conn = sqlite3.connect("imageDNA.db")
     c = conn.cursor()
     c.execute('''
-        CREATE TABLE IF NOT EXISTS image_blocks (
+        CREATE TABLE image_blocks (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             image_name TEXT,
             block_row INTEGER,
             block_col INTEGER,
-            data TEXT  -- now stores hash rather than data
+            data TEXT
         )
     ''')
     conn.commit()
