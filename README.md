@@ -8,3 +8,5 @@ Use the beta testing folder to see the instructions if you would like to use you
 for comparing hashes, I used: DB Browser (SQLite) with the database fill that is made from running the batch file.
 
 all photos were done by me in my photography class elective. 
+
+any and all artistic art pieces were done by me (this includes the wallpaper used for the "body" of my landing page.
